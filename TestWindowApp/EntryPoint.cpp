@@ -43,9 +43,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 
 		OpenGLInfo openGLInfo(OpenGLVersionMajor, OpenGLVersionMinor, FieldOfView, FrustumNear, FrustumFar);
 
-		MainWindow mainWindow(hInstance, nCmdShow, wndInfo, openGLInfo);
+		MainWindow mainWindow(hInstance, wndInfo, openGLInfo);
 
-		res = mainWindow.runMessageLoop();
+		res = mainWindow.runMessageLoop(nCmdShow);
 	}
 	catch (const Exception& ex)
 	{

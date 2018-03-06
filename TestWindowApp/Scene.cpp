@@ -106,6 +106,12 @@ bool Scene::initialize(GLfloat aspectRatio, const OpenGLInfo& openGlInfo)
 		assert(false); return false;
 	}
 
+	if (!m_spProgram->validate())
+	{
+		std::wcerr << L"GLSL program validation failed\n";
+		assert(false); return false;
+	}
+
 	return true;
 }
 
